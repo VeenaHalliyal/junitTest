@@ -1,6 +1,9 @@
 package com.practice.jenkins.JunitTest;
 
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 
 public class Test1 {
 	@Test
@@ -9,5 +12,13 @@ public class Test1 {
 		System.out.println("junit test");
 	}
 
-	
+	@Test
+	public void launch(){
+		String key="webdriver.gecko.driver";
+		String value="./Softwares/geckodriver.exe";
+		System.setProperty(key, value);
+		 WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.google.co.in/");
+		
+	}
 }
