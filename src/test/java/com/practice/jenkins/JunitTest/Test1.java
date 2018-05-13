@@ -14,10 +14,10 @@ public class Test1 {
 
 	@Test
 	public void launch(){
-		String key="webdriver.gecko.driver";
-		String value="./Softwares/geckodriver.exe";
+		String key="webdriver.chrome.driver";
+		String value="./Softwares/chromedriver.exe";
 		System.setProperty(key, value);
-		 WebDriver driver=new FirefoxDriver();
+		 WebDriver driver=new ChromeDriver();
 		driver.get("https://www.google.co.in/");
 		
 	}
